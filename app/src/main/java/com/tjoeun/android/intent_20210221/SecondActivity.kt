@@ -10,8 +10,13 @@ class SecondActivity : AppCompatActivity() {
         setContentView(R.layout.activity_second)
 
         // 목적지 도착상황
+        // 참조형변수는 기본값지정안함
+        // 첨부안되면 null
         val receivedMessage = intent.getStringExtra("message")
-        val birthDat        = intent.getStringExtra("출생년도")
+
+        // Int, Double, Boolean -> Default value지정
+        val myBirthYear= intent.getIntExtra("출생년도", 0)
+
         receivedMessageTxt.text = receivedMessage
     }
 }
