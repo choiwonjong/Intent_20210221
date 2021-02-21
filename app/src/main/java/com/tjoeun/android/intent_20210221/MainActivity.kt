@@ -46,6 +46,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         dialBtn.setOnClickListener {
+            // 다이얼기능
+            // 처리됨
 
             //입력한 전화번호
             val phoneNumber = "01011112222"
@@ -63,10 +65,26 @@ class MainActivity : AppCompatActivity() {
         }
 
         callBtn.setOnClickListener {
+            // 콜기능은 개발자가 사용자의 요금을 사용하므로 사용자의 권한을 획득 필요
+            // 아직은 안걸림
+            // 퍼미션 디나이드 Exception발생함
             val phoneNumber = "01011112222"
             val myUri = Uri.parse("tel:${phoneNumber}")
             val myIntent = Intent(Intent.ACTION_CALL, myUri)
             startActivity(myIntent)
+        }
+
+        smsBtn.setOnClickListener {
+            val smsNum = "01011112222"
+
+            //Uri필요
+            val myUri = Uri.parse("smsto:${smsNum}")
+
+            // Intent -> Action Uri전달
+            val myIntent = Intent(Intent.ACTION_SENDTO, myUri)
+
+            startActivity(myIntent)
+
         }
     }
 

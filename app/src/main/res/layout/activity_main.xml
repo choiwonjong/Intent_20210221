@@ -61,4 +61,15 @@
         android:layout_height="wrap_content"
         android:text="전화연결(Dial)"
 
+    <Button
+        android:id="@+id/callBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="전화연결(Call)"
+
+    <Button
+        android:id="@+id/smsBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="sms전송"
 </LinearLayout>
