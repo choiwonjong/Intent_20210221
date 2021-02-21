@@ -84,10 +84,27 @@ class MainActivity : AppCompatActivity() {
             val myIntent = Intent(Intent.ACTION_SENDTO, myUri)
 
             // 문자 내용 기본값 입력 => 문자화면에 데이터 첨부
+            // "sms_body"는 구글링
             myIntent.putExtra("sms_body", "원하는 기본 메세지")
 
             startActivity(myIntent)
+       }
+
+        naverBtn.setOnClickListener {
+            // 인터넷
+            val myUri = Uri.parse("https://naver.com/")
+            val myIntent = Intent(Intent.ACTION_VIEW, myUri)
+            startActivity(myIntent)
         }
+
+        kakaoBtn.setOnClickListener {
+            // 마켓
+            val myUri = Uri.parse("market://detail?id=com.kakao.talk")
+            val myIntent = Intent(Intent.ACTION_VIEW, myUri)
+            startActivity(myIntent)
+        }
+
+
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

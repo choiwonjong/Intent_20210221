@@ -59,17 +59,30 @@
         android:id="@+id/dialBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="전화연결(Dial)"
+        android:text="전화연결(Dial)" />
 
     <Button
         android:id="@+id/callBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="전화연결(Call)"
+        android:text="전화연결(Call)" />
 
     <Button
         android:id="@+id/smsBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="sms전송"
+        android:text="sms전송" />
+
+    <Button
+        android:id="@+id/naverBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="네이버버튼" />
+
+    <Button
+        android:id="@+id/kakaoBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="카카오버튼" />
+
 </LinearLayout>
