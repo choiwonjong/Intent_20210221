@@ -37,8 +37,11 @@ class MainActivity : AppCompatActivity() {
             // 새 닉네임을 얻기 위해 => 액티비티 이동
             val myIntent = Intent(this, ChangeNickName::class.java)
 
-            // 어떤 데이터를 받으로 가는건지 숫자로 구별 ㄷㅌ
+            // 어떤 데이터를 받으로 가는건지 숫자로 구별
             startActivityForResult(myIntent, REQ_FOR_NICKNAME)
+
+            startActivity(myIntent)
+
         }
     }
 }
