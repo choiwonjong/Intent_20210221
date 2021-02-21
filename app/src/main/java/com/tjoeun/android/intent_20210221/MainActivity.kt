@@ -53,12 +53,20 @@ class MainActivity : AppCompatActivity() {
             // 폰번호 => 안드로이드의 연결정보(Uri)로 변환
             val myUri = Uri.parse("tel:${phoneNumber}")
 
-            //Intent를 활용 -> 안드로이드 전화 화면 띠으기
+            //Intent를 활용 -> 안드로이드 전화 화면 띄우기
             val myIntent = Intent(Intent.ACTION_DIAL, myUri)
             startActivity(myIntent)
 
 
+        //  val myIntent = Intent(Intent.ACTION_CALL, myUri)
+        //  startActivity(myIntent)
+        }
 
+        callBtn.setOnClickListener {
+            val phoneNumber = "01011112222"
+            val myUri = Uri.parse("tel:${phoneNumber}")
+            val myIntent = Intent(Intent.ACTION_CALL, myUri)
+            startActivity(myIntent)
         }
     }
 
