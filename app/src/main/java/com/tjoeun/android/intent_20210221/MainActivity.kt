@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity() {
 
             // 두번째 화면
             val myIntent = Intent(this, SecondActivity::class.java)
+
             myIntent.putExtra("message", inputContent)
             myIntent.putExtra("출생년도", "1988")
 
