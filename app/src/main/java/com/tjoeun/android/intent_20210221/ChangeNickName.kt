@@ -13,16 +13,16 @@ class ChangeNickName : AppCompatActivity() {
 
         okBtn.setOnClickListener {
 
-            val inputNickName = "입력닉네임:코지"
+            val inputNickName = "입력 닉네임:코지"
 
             // 확인버튼을 누른게 맞다명시 + 그때 들고가갈 데이터를  첨부
-            // 데이터 첨부전용 Intent todtjd
+            // 데이터 첨부전용 Intent 생성
             // 복귀용이무로 출발/도착지 정보 필요 없다  빈칸유지
              val retIntent = Intent()
             retIntent.putExtra("nick", inputNickName)
-
             setResult(Activity.RESULT_OK, retIntent)
 
+            // 메인으로 복귀
             finish()
 
         }
