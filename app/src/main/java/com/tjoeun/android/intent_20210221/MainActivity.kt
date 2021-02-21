@@ -2,6 +2,7 @@ package com.tjoeun.android.intent_20210221
 
 import android.app.Activity
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
@@ -42,6 +43,21 @@ class MainActivity : AppCompatActivity() {
             startActivityForResult(myIntent, REQ_FOR_NICKNAME)
 
             startActivity(myIntent)
+        }
+
+        dialBtn.setOnClickListener {
+
+            //입력한 전화번호
+            val phoneNumber = "01011112222"
+
+            // 폰번호 => 안드로이드의 연결정보(Uri)로 변환
+            val myUri = Uri.parse("tel:${phoneNumber}")
+
+            //Intent를 활용 -> 안드로이드 전화 화면 띠으기
+            val myIntent = Intent(Intent.ACTION_DIAL, myUri)
+            startActivity(myIntent)
+
+
 
         }
     }

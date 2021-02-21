@@ -49,4 +49,16 @@
 
     </LinearLayout>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="연결할 전화번호"
+        android:layout_marginTop="15dp" />
+
+    <Button
+        android:id="@+id/dialBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="전화연결(Dial)"
+
 </LinearLayout>
